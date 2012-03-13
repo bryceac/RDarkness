@@ -1,0 +1,19 @@
+<!--
+Copyright (c) 2012 Bryce Campbell
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+<?xml version="1.0" encoding="utf-8" ?>
+<pluggable type="theme">
+<name>RDarkness</name>
+<class>rdarkness</class>
+<author>Bryce Campbell</author>
+<version>0.1</version>
+<description>This is a dark theme for Habari. It features a black background with a red heading area that is separated from the content by a gray bar. Content itself is in a white background.</description>
+<template_engine>rawphpengine</template_engine>
+<copyright>2012</copyright>
+</pluggable>
