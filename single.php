@@ -11,12 +11,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <?php $theme->display( 'header' ); ?>
 <div id="content"> <!-- content div -->
 <div id="post-nav"> <!-- post navigation -->
-<?php if ($previous = $post->ascend())
+<?php if ($previous = $post->descend())
 { ?>
 <span class="left"><a href="<?php echo $previous->permalink; ?>" title="<?php echo $previous->slug; ?>"><?php echo $previous->title; ?></a></span>
 <?php } ?>
 
-<?php if ($next = $post->descend())
+<?php if ($next = $post->ascend())
 { ?>
 <span class="right"><a href="<?php echo $next->permalink; ?>" title="<?php echo $next->slug; ?>"><?php echo $next->title; ?></a></span>
 <?php } ?>
