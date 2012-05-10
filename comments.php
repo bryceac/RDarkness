@@ -24,18 +24,17 @@
 </div>
 <?php } ?>
 <h4 class="commentheading"><?php echo $post->comments->comments->approved->count; ?> <?php echo _n( 'Comment', 'Comments', $post->comments->comments->approved->count ); ?></h4>
-	<ul id="commentlist">
 
 		<?php
-		if ( $post->comments->moderated->count ) {
-			foreach ( $post->comments->comments->moderated as $comment ) {
+		if ( $post->comments->moderated->count ) { ?>
+			<ul id="commentlist">
+			<?php foreach ( $post->comments->comments->moderated as $comment ) {
 			$class = 'class="comment';
 			if ( $comment->status == Comment::STATUS_UNAPPROVED ) {
 				$class.= '-unapproved';
 			}
 			$class.= '"';
 		?>
-
 			<li id="comment-<?php echo $comment->id; ?>" <?php echo $class; ?>>
  				<div class="comment-content">
 		        <?php echo $comment->content_out; ?>
@@ -44,18 +43,18 @@
 		       <span class="commentauthor"><?php _e('Comment by'); ?> <?php echo $comment->name_out; ?></span>
 		       <span class="commentdate"> <?php _e('on'); ?> <a href="#comment-<?php echo $comment->id; ?>" title="<?php _e('Time of this comment'); ?>"><?php $comment->date->out('M j, Y h:ia'); ?></a></span><h5><?php if ( $comment->status == Comment::STATUS_UNAPPROVED ) : ?> <em><?php _e('In moderation'); ?></em><?php endif; ?></h5></div>
 		      </li>
-
+				
 
 
 
 		<?php
-			}
-		}
+			} ?>
+			</ul>
+		<?php } 
 		else {
 			_e('There are currently no comments.');
 		}
 		?>
-	</ul>
     <div id="commentform">
 
 		<br>
