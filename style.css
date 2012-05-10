@@ -296,4 +296,9 @@ a:active {
 #pagenav {
 			display:none;
 		}
+		
+/* hide comment form from printer */
+#commentform {
+				display:none;
+			}
 }
