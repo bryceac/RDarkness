@@ -148,6 +148,14 @@ a:active {
 			float:right;
 			clear:right;
 		}
+		
+/* remove bullets in comments */
+#comments ul {
+				list-style-type:none;
+			}
+#post-nav, .post {
+					clear:both;
+				}
 }
 
 
@@ -297,8 +305,8 @@ a:active {
 			display:none;
 		}
 		
-/* hide comment form from printer */
-#commentform {
+/* hide comments from printer */
+#comments {
 				display:none;
 			}
 }
