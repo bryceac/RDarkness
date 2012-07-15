@@ -12,7 +12,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <div id="content"> <!-- content div -->
 <div class="post"> <!-- container for posts -->
 <h2><a href="<?php echo $post->permalink; ?>" title="<?php echo $post->title; ?>"><?php echo $post->title_out; ?></a></h2>
-<div class="date"><?php echo $post->pubdate->out('F j, Y'); ?></div>
 <div class="entry"><?php echo $post->content_out; ?></div>
 <div class="meta">
 <?php if (count($post->tags))
