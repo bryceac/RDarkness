@@ -41,7 +41,7 @@
 		       </div>
 			<div class="comment-meta">
 		       <span class="commentauthor"><?php _e('Comment by'); ?> 
-			   <?php if (!isset($comment->url)) 
+			   <?php if (is_null($comment->url) || strlen($comment->url) == 0) 
 			   { ?>
                <?php echo $comment->name_out; ?></span>
                <?php } else { ?>
