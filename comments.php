@@ -25,10 +25,14 @@
 <?php } ?>
 <h4 class="commentheading"><?php echo $post->comments->comments->approved->count; ?> <?php echo _n( 'Comment', 'Comments', $post->comments->comments->approved->count ); ?></h4>
 
-		<?php
-		if ( $post->comments->moderated->count ) { ?>
+		<?php if ( $post->comments->moderated->count ) { ?>
 			<ul id="commentlist">
-			<?php foreach ( $post->comments->comments->moderated as $comment ) {
+            <?php if ($post->threadedComments) 
+			{
+            	foreach ($post->threadedComments as $comment)
+        			$theme->output_comment($post, $comment, 1, $theme->commentThreadMaxDepth);
+			} else { ?>
+            	<?php foreach ( $post->comments->comments->moderated as $comment ) {
 			$class = 'class="comment';
 			if ( $comment->status == Comment::STATUS_UNAPPROVED ) {
 				$class.= '-unapproved';
@@ -49,21 +53,24 @@
                <?php } ?>
 		       <span class="commentdate"> <?php _e('on'); ?> <a href="#comment-<?php echo $comment->id; ?>" title="<?php _e('Time of this comment'); ?>"><?php $comment->date->out('M j, Y h:ia'); ?></a></span><h5><?php if ( $comment->status == Comment::STATUS_UNAPPROVED ) : ?> <em><?php _e('In moderation'); ?></em><?php endif; ?></h5></div>
 		      </li>
-				
-
-
-
 		<?php
 			} ?>
-			</ul>
-		<?php } 
-		else {
-			_e('There are currently no comments.');
-		}
-		?>
+         	<?php } ?>
+         <?php } else {
+         			_e('There are currently no comments.');
+          } ?>
+          </ul>
+     <?php if (!$post->info->comments_disabled)
+	 { ?>
     <div id="commentform">
 
 		<br>
 <?php $post->comment_form()->out(); ?>
 	</div>
+    <?php } else {
+					_e('Sorry, This post is closed to new comments.');
+	} ?>
 </div> <!-- close comment div -->
+<!--
+
+--!>
