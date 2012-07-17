@@ -17,6 +17,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <link rel="alternate" href="<?php URL::out( 'atom_feed', array( 'index' => 1)); ?>" title="Entry Feed" type="application/atom+xml">
 <link rel="alternate" href="<?php URL::out( 'atom_feed_comments'); ?>" title="Comments feed" type="application/atom+xml">
 <link href="<?php Site::out_url( 'theme'); ?>/style.css" rel="stylesheet" type="text/css">
+<?php echo $theme->header(); ?>
 </head>
 
 <body>

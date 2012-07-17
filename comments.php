@@ -26,6 +26,7 @@
 <h4 class="commentheading"><?php echo $post->comments->comments->approved->count; ?> <?php echo _n( 'Comment', 'Comments', $post->comments->comments->approved->count ); ?></h4>
 
 		<?php if ( $post->comments->moderated->count ) { ?>
+        	<?php // Utils::debug( $post->threadedComments ); ?>
 			<ul id="commentlist">
             <?php if ($post->threadedComments) 
 			{
@@ -71,6 +72,3 @@
 					_e('Sorry, This post is closed to new comments.');
 	} ?>
 </div> <!-- close comment div -->
-<!--
-
---!>
