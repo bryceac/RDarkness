@@ -296,4 +296,9 @@ a:link, a:visited {
 .socialink {
 				display:none;
 			}
+			
+/* display link addresses on print, which may be ignored in some browsers. Does not work too well for internal links. */
+.entry a:link:after, .entry a:visited:after {
+										content: " (" attr(href) ")";
+									}
 }

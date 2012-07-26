@@ -57,10 +57,10 @@
 		<?php
 			} ?>
          	<?php } ?>
+          </ul>
          <?php } else {
          			_e('There are currently no comments.');
           } ?>
-          </ul>
      <?php if (!$post->info->comments_disabled)
 	 { ?>
     <div id="commentform">
