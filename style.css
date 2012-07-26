@@ -180,33 +180,22 @@ h1, h2, h3, h4, h5, h6 {
 /* do not display header and footer divs */
 #header, #footer { 
 					clear:both;
-					background-image:url("images/bar.svg");
 					display:none;
 				}
 				
 /* center content to page */
 #wrapper {
-			margin-right:auto;
-			padding-right:auto;
-			margin-left:auto;
-			padding-left:auto;
-			width:90%;
 			background-color:#FFFFFF;
 		}
 
 /* hide sidebar */
 #sidebar {
-		float:right;
-		clear:right;
-		width:25%;
-		display:none;
+			display:none;
 	}
 
 /* position main content to left inside parent element */
 #content {
-		float:left;
-		clear:left;
-		width:70%;
+		width:100%;
 	}
 
 /* formatting for all posts */
@@ -221,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
 	
 /* position post metadata in center */	
 .meta {
-		text-align:center;
+		display:none;
 	}
 	
 /*make sure no bullet appear in sidebar */
@@ -269,18 +258,11 @@ ul.noBullet li {
 					font-style:italic;
 				}
 
-/* remove underlining from all links */				
-a:link {
-			text-decoration:none;
-		}
-
-/* the following are not displayed because rules do not apply to printed pages */	
-a:hover {
+/* display underlining for print */				
+a:link, a:visited {
 			text-decoration:underline;
-		}
-		
-a:active {
-			font-style:italic;
+			color:#520;
+			font-weight:bold;
 		}
 
 /* the following are not displayed if parent element is not visible */
@@ -307,6 +289,11 @@ a:active {
 		
 /* hide comments from printer */
 #comments {
+				display:none;
+			}
+			
+/* hide socialink output, if plugin is installed and active */
+.socialink {
 				display:none;
 			}
 }
