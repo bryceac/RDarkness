@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 </div> <!-- close footer -->
 <div id="notice"> <!-- place to hold footer message -->
 <p><?php Options::out( 'title' ); ?> is powered by <a href="http://habariproject.org">Habari</a>. Theme created by Bryce.</p>
-<?php $theme->footer; ?>
+<?php echo $theme->footer(); ?>
 </div> <!-- place to hold footer message -->
 </div><!-- close wrapper -->
 </body>
