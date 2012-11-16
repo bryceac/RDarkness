@@ -301,4 +301,9 @@ a:link, a:visited {
 .entry a:link:after, .entry a:visited:after {
 										content: " (" attr(href) ")";
 									}
+									
+/* display abbreviation and acronym meanings on printed page, if page uses the respective abbr and acronym tags. */
+abbr:after, acronym:after {
+	content: " (" attr(title) ")";
+}
 }
