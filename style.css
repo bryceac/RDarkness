@@ -115,11 +115,11 @@ ul.noBullet li {
 										}
 										
 /* display underline if hovering over link in space above header div */										
-#top a:hover {
+#top a:hover, #top a:focus {
 				text-decoration:underline;
 			}
 
-/* make click link in space above header div italics */			
+/* make clicked link in space above header div italics */			
 #top a:active {
 					font-style:italic;
 				}
@@ -129,7 +129,7 @@ a:link {
 			text-decoration:none;
 		}
 		
-a:hover {
+a:hover, a:focus {
 			text-decoration:underline;
 		}
 		
