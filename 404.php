@@ -12,7 +12,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <div id="content"> <!-- content div -->
 <p><?php _e('Content can not be found.'); ?></p>
 <p><?php _e('Perhaps a search can help.'); ?></p>
-<?php $theme->display( 'searchform' ); ?>
 </div> <!-- close content div -->
 <div id="sidebar"> <!-- create area for side bar -->
 <?php $theme->display( 'sidebar' ); ?>
