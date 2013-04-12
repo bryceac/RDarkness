@@ -12,7 +12,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo $charset; ?>">
-<title><?php if ($request->display_entry || $request->display_page && isset($post)) { echo "$post->title - "; } ?><?php Options::out( 'title' ); ?></title>
+<title>
+<?php if ($request->display_entry || $request->display_page && isset($post)) { echo "$post->title - "; } ?>
+<?php if ($request->display_entries_by_tag && isset( $tag )) { echo "$tag - "; } ?>
+<?php Options::out( 'title' ); ?>
+</title>
 <?php $theme->header(); ?>
 <link rel="alternate" href="<?php URL::out( 'atom_feed', array( 'index' => 1)); ?>" title="Entry Feed" type="application/atom+xml">
 <link rel="alternate" href="<?php URL::out( 'atom_feed_comments'); ?>" title="Comments feed" type="application/atom+xml">
