@@ -14,7 +14,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo $charset; ?>">
 <title>
 <?php if ($request->display_entry || $request->display_page && isset($post)) { echo "$post->title - "; } ?>
-<?php if ($request->display_entries_by_tag && isset( $tag )) { echo(Tags::get_by_slug($tag)->term_display . ' - '); } ?>
+<?php if ($request->display_entries_by_tag && isset( $tag )) { echo(ucwords(Tags::get_by_slug($tag)->term_display) . ' - '); } ?>
 <?php Options::out( 'title' ); ?>
 </title>
 <?php $theme->header(); ?>
