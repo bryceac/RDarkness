@@ -50,7 +50,7 @@
 			   { ?>
                <?php echo $comment->name_out; ?></span>
                <?php } else { ?>
-               <a href="<?php echo $comment->url; ?>"><?php echo $comment->name_out; ?></span></a>
+               <a href="<?php echo $comment->url; ?>" rel="nofollow"><?php echo $comment->name_out; ?></span></a>
                <?php } ?>
 		       <span class="commentdate"> <?php _e('on'); ?> <a href="#comment-<?php echo $comment->id; ?>" title="<?php _e('Time of this comment'); ?>"><?php $comment->date->out('M j, Y h:ia'); ?></a></span><h5><?php if ( $comment->status == Comment::STATUS_UNAPPROVED ) : ?> <em><?php _e('In moderation'); ?></em><?php endif; ?></h5></div>
 		      </li>
