@@ -13,9 +13,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo $charset; ?>">
 <title>
-<?php if ($request->display_entry || $request->display_page && isset($post)) { echo "$post->title - "; } ?>
-<?php if ($request->display_entries_by_tag && isset( $tag )) { echo(ucwords(Tags::get_by_slug($tag)->term_display) . ' - '); } ?>
-<?php if ($request->display_search) { echo("Search for '" . htmlspecialchars( $citeria ) . "' - ")} ?>
+<?php if ($request->display_entry || $request->display_page && isset($post)) { echo "$post->title - "; } ?> <!-- conditional statement that adds post or page title to what the browser recognizes as page title -->
+<?php if ($request->display_entries_by_tag && isset( $tag )) { echo(ucwords(Tags::get_by_slug($tag)->term_display) . ' - '); } ?> <!-- conditional statement that adds tag name to the page title -->
+<?php if ($request->display_search) { echo("'" . htmlspecialchars( $criteria ) . "' Search Results - "); } ?> <!-- conditional statement based on hmallow_mobile Habari theme -->
 <?php Options::out( 'title' ); ?>
 </title>
 <?php $theme->header(); ?>
