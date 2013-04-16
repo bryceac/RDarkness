@@ -15,6 +15,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <title>
 <?php if ($request->display_entry || $request->display_page && isset($post)) { echo "$post->title - "; } ?>
 <?php if ($request->display_entries_by_tag && isset( $tag )) { echo(ucwords(Tags::get_by_slug($tag)->term_display) . ' - '); } ?>
+<?php if ($request->display_search) { echo("Search for '" . htmlspecialchars( $citeria ) . "' - ")} ?>
 <?php Options::out( 'title' ); ?>
 </title>
 <?php $theme->header(); ?>
