@@ -1,0 +1,73 @@
+'''Author:''' Bryce
+'''Author's blog:''' http://brycecampbell.me/~bryce/blog
+'''Copyright:''' 2012 Bryce Campbell
+
+'''Description:''' RDarkness is a theme created for Habari and tested with version 0.8. Its code is based on a mix of K2, Charcoal, and Mzingi. Even though it is a dark theme, only the main background is dark, in order to ensure readability.
+
+==FAQ==
+
+<ul>
+<li>
+<dl>
+<dt>What version of HTML does this use?</dt>
+<dd>It was made against the W3C HTML 4.01 standard, but uses the HTML 5 Doctype because of validation issues with the comment form.
+</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>Does this theme work with WordPress?</dt>
+<dd>No, it does not because the functions used are mainly found only in Habari. WordPress has different names for functions that do the same things though.
+</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>Why does the theme not look the exact same in all browsers?
+The layout should be the same, but this theme makes use of SVG image backgrounds with solid color fallbacks. Browsers that do not support SVG backgrounds should see these solid colors instead.
+</dt>
+</dl>
+</li>
+</ul>
+
+==How to install:==
+
+To install this theme, move the RDarkness folder or clone this repo to
+
+<pre>
+BlogRoot/user/themes/
+</pre>
+
+<dl>
+<dt>BlogRoot</dt>  <dd>directory where Habari resides</dd>
+
+<dt>user</dt> <dd>user directory</dd>
+
+<dt>themes</dt>  <dd>themes directory</dd>
+</dl>
+
+Theme will need to be activated for it to be your blog's theme.
+
+
+==Where to find help==
+
+If you need help, contact the author at the following email address:
+
+brycecmpbell@gmail.com
+
+==Misc.==
+
+There are spaces populated by things I added for my own blog. Feel free to delete what you do not need and replace plugins you do not like. Such stuff is found in sidebar.php. I ask that you do not modify any other PHP file, unless absolutely necessary for plugins you want to use, as to ensure problems do not occur.
+
+If you make changes to sidebar.php, I suggest you backup that file, so you do not lose your changes when getting updates.
+
+===Recommended Plugins===
+
+This theme makes use of various plugins that I think look best with the theme. If you want to see it how I do, I recommend installing the following:
+
+<ul>
+<li>[https://github.com/habari-extras/blogroll blogroll]</li>
+<li>[http://blog.tinyau.net/archives/2007/09/22/habari-rn-monthly-archives-plugin RN Monthly Archives]</li>
+</ul>
+
+There is one other plugin, but I cannot find it anymore.
