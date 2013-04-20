@@ -10,7 +10,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 -->
 <pluggable type="theme">
 <name>RDarkness</name>
-<class>rdarkness</class>
+<!-- <class>rdarkness</class> -->
 <author>Bryce Campbell</author>
 <version>0.3</version>
 <description>This is a dark theme for Habari. It features a black background with a red heading area that is separated from the content by a gray bar. Content itself is in a white background.</description>
