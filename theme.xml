@@ -10,6 +10,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 -->
 <pluggable type="theme">
 <name>RDarkness</name>
+<license url="http://opensource.org/licenses/MIT">MIT License</license>
 <!-- <class>rdarkness</class> -->
 <author>Bryce Campbell</author>
 <version>0.3</version>
