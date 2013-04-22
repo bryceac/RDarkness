@@ -57,11 +57,16 @@ h1, h2, h3, h4, h5, h6 {
 		clear:left;
 		width:70%;
 	}
-
+	
 /* formatting for all posts */
 .post {
 		text-align:left;
 	}
+	
+/* resize post images */
+.post img {
+	max-width:100%;
+}
 	
 /* format rules for pub date */	
 .date {
