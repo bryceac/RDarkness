@@ -3,7 +3,12 @@
 '''Copyright:''' 2012 Bryce Campbell
 
 '''Description:''' RDarkness is a theme created for Habari and tested with version 0.8. Its code is based on a mix of K2, Charcoal, and Mzingi. Even though it is a dark theme, only the main background is dark, in order to ensure readability.
+'''Version:''' 0.4
+==Version History==
 
+<dl>
+<dt>0.3</dt><dd>
+</dl>
 ==FAQ==
 
 <ul>
@@ -23,9 +28,14 @@
 </li>
 <li>
 <dl>
-<dt>Why does the theme not look the exact same in all browsers?
-The layout should be the same, but this theme makes use of SVG image backgrounds with solid color fallbacks. Browsers that do not support SVG backgrounds should see these solid colors instead.
-</dt>
+<dt>Why does the theme not look the exact same in all browsers?</dt>
+<dd>The layout should be the same, but this theme makes use of SVG image backgrounds with solid color fallbacks. Browsers that do not support SVG backgrounds should see these solid colors instead.</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>I updated to version 0.4 and cannot configure the theme. Why?</dt>
+<dd>While testing the changes, I found that I needed to deactivate theme, by temporarily activating a different theme, then reactivating this one.</dd>
 </dl>
 </li>
 </ul>
@@ -57,9 +67,13 @@ brycecmpbell@gmail.com
 
 ==Misc.==
 
-There are spaces populated by things I added for my own blog. Feel free to delete what you do not need and replace plugins you do not like. Such stuff is found in sidebar.php. I ask that you do not modify any other PHP file, unless absolutely necessary for plugins you want to use, as to ensure problems do not occur.
+There are spaces populated by things I added for my own blog. As of version 0.4, if there are things you do not want displayed, they can be turned out in theme configuration. I ask that you do not edit any PHP files, unless necessary by the plugin you want to use.
+
+In order to keep things configurable, do not remove any conditional PHP statements, especially the recent comments code, because a lot of them are responsible for making the theme configurable.
 
 If you make changes to sidebar.php, I suggest you backup that file, so you do not lose your changes when getting updates.
+
+Version 0.4 has been tested with Habari 0.9. It is not known if anything beyond 0.3 is backward compatible with 0.8.
 
 ===Recommended Plugins===
 
@@ -69,5 +83,3 @@ This theme makes use of various plugins that I think look best with the theme. I
 <li>[https://github.com/habari-extras/blogroll blogroll]</li>
 <li>[http://blog.tinyau.net/archives/2007/09/22/habari-rn-monthly-archives-plugin RN Monthly Archives]</li>
 </ul>
-
-There is one other plugin, but I cannot find it anymore.
