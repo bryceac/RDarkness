@@ -7,8 +7,10 @@
 ==Version History==
 
 <dl>
-<dt>0.3</dt><dd>
+<dt>0.3</dt><dd>Last known version that works on 0.8</dd>
+<dt>0.4</dt><dd>Update. Theme is now configurable. released 4/30/2013</dd>
 </dl>
+
 ==FAQ==
 
 <ul>
