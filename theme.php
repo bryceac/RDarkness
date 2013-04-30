@@ -34,33 +34,41 @@ class rdarkness extends Theme
 		}
 	}
 	
-	// allow theme configuration
-	public function action_theme_ui( $theme )
+	// required to allow theme configuration
+	public function filter_theme_config($configurable)
+	{
+		$configurable = true;
+		return $configurable;
+	}
+	
+	// make configuration form
+	public function action_theme_ui($theme)
 	{
 		$ui = new FormUI('RDarkness config');
-		$login = $ui->append('checkbox', 'mod_login', 'display_login', _t('Display login'));
-		$login->value = Options::get('display_login');
-		$rcomments = $ui->append('checkbox', 'mod_rcomments', 'display_rcomments', _t('Display Recent Comments'));
-		$rcomments->value = Options::get('display_rcomments');
-		$pages = $ui->append('checkbox', 'mod_pages', 'display_pages', _t('Display Pages'));
-		$pages->value = Options::get('display_pages');
-		$archive = $ui->append('checkbox', 'mod_archives', 'display_archives', _t('Display Archives'));
-		$archive->value = Options::get('display_archives');
-		$dtags = $ui->append('checkbox', 'mod_tags', 'display_tags', _t('Display Tags'));
-		$dtags->value = Options::get('display_tags');
-		$blogroll = $ui->append('checkbox', 'mod_blogroll', 'display_blogroll', _t('Display Blogroll'));
-		$blogroll->value = Options::get('display_blogroll');
-		$mabout = $ui->append('checkbox', 'mod_mod_about', 'display_about', _t('Display About Message'));
-		$mabout->value = Options::get('display_about');
-		$fmess = $ui->append('checkbox', 'mod_fmess', 'display_fmess', _t('Display Footer Message'));
-		$fmess->value = Options::get('display_fmess');
-		$mlinks = $ui->append('checkbox', 'mod_mlinks', 'display_mlinks', _t('Display Misc. Links'));
-		$mlinks->value = Options::get('display_mlinks');
-		$flinks = $ui->append('checkbox', 'mod_flinks', 'display_flinks', _t('Display Feed Links'));
-		$flinks->value = Options::get('display_flinks');
+		$ui->append('checkbox', 'mod_login', __CLASS__.'__display_login', _t('Display login'));
+		$ui->mod_login->value = Options::get(__CLASS__.'__display_login');
+		$ui->append('checkbox', 'mod_rcomments', __CLASS__.'__display_rcomments', _t('Display Recent Comments'));
+		$ui->mod_rcomments->value = Options::get(__CLASS__.'__display_rcomments');
+		$ui->append('checkbox', 'mod_pages', __CLASS__.'__display_pages', _t('Display Pages'));
+		$ui->mod_pages->value = Options::get(__CLASS__.'__display_pages');
+		$ui->append('checkbox', 'mod_archives', __CLASS__.'__display_archive', _t('Display Archives'));
+		$ui->mod_archives->value = Options::get(__CLASS__.'__display_archive');
+		$ui->append('checkbox', 'mod_tags', __CLASS__.'__display_tags', _t('Display Tags'));
+		$ui->mod_tags->value = Options::get(__CLASS__.'__display_tags');
+		$ui->append('checkbox', 'mod_blogroll', __CLASS__.'__display_blogroll', _t('Display Blogroll'));
+		$ui->mod_blogroll->value = Options::get(__CLASS__.'__display_blogroll');
+		$ui->append('checkbox', 'mod_about', __CLASS__.'__display_about', _t('Display About Message'));
+		$ui->mod_about->value = Options::get(__CLASS__.'__display_about');
+		$ui->append('checkbox', 'mod_fmess', __CLASS__.'__display_fmess', _t('Display Footer Message'));
+		$ui->mod_fmess->value = Options::get(__CLASS__.'__display_fmess');
+		$ui->append('checkbox', 'mod_mlinks', __CLASS__.'__display_mlinks', _t('Display Misc. Links'));
+		$ui->mod_mlinks->value = Options::get(__CLASS__.'__display_mlinks');
+		$ui->append('checkbox', 'mod_flinks', __CLASS__.'__display_flinks', _t('Display Feed Links'));
+		$ui->mod_flinks->value = Options::get(__CLASS__.'__display_flinks');
 		$ui->append('submit', 'save', _t('Save'));
 		$ui->set_option('success_message', _t('Configuration saved'));
-		return $ui;
+		// return $ui;
+		$ui->out();
 	}
 	public function action_init_theme()
 	{
