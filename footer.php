@@ -12,7 +12,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 &#160;
 </div> <!-- close footer -->
 <div id="notice"> <!-- place to hold footer message -->
-<?php if (Options::get('rdarkness__display_fmess')) { ?> <!-- check if footer message should be displayed -->
+<?php if ($display_fmess) { ?> <!-- check if footer message should be displayed -->
 <p><?php Options::out( 'title' ); ?> is powered by <a href="http://habariproject.org">Habari</a>. Theme created by Bryce.</p>
 </div> <!-- place to hold footer message -->
 <?php } ?> <!-- end footer message if -->

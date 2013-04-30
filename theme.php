@@ -94,6 +94,21 @@ class rdarkness extends Theme
 		}
 		
 		parent::add_template_vars();
+		
+		// assign variables to use with options
+		$opts = Options::get_group(__CLASS__);
+		
+		$this->assign('display_login', $opts['display_login']);
+		$this->assign('display_rcomments', $opts['display_rcomments']);
+		$this->assign('display_pages', $opts['display_pages']);
+		$this->assign('display_archives', $opts['display_archive']);
+		$this->assign('display_tags', $opts['display_tags']);
+		$this->assign('display_blogroll', $opts['display_blogroll']);
+		$this->assign('display_about', $opts['display_about']);
+		$this->assign('display_fmess', $opts['display_fmess']);
+		$this->assign('display_mlinks', $opts['display_mlinks']);
+		$this->assign('display_flinks', $opts['display_flinks']);
+		
 	}
 }
 ?>
