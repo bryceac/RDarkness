@@ -29,6 +29,10 @@
 <li>
 <dl>
 <dt>Why does the theme not look the exact same in all browsers?</dt>
+<<<<<<< HEAD
+<dd>The layout should be the same, but this theme makes use of SVG image backgrounds with solid color fallbacks. Browsers that do not support SVG backgrounds should see these solid colors instead.
+</dd>
+=======
 <dd>The layout should be the same, but this theme makes use of SVG image backgrounds with solid color fallbacks. Browsers that do not support SVG backgrounds should see these solid colors instead.</dd>
 </dl>
 </li>
@@ -82,4 +86,5 @@ This theme makes use of various plugins that I think look best with the theme. I
 <ul>
 <li>[https://github.com/habari-extras/blogroll blogroll]</li>
 <li>[http://blog.tinyau.net/archives/2007/09/22/habari-rn-monthly-archives-plugin RN Monthly Archives]</li>
+<li>[http://blog.tinyau.net/archives/2007/08/30/habari-rn-tag-cloud-plugin RN Tag Cloud]</li>
 </ul>
