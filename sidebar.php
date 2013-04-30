@@ -38,8 +38,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		<?php echo $theme->monthly_archives(); ?>
 		</div>
 <?php } ?> <!-- end monthly archives if -->
-<?php if (Options::get('rdarkness__display_recent')) { ?> <!-- check if recent comments should be displayed -->
+<?php if (Options::get('rdarkness__display_rcomments')) { ?> <!-- check if recent comments should be displayed -->
 <div class="recent">
+		<h2>Recent Comments</h2>
         <ul>
 		<?php foreach($recent_comments as $comment) { ?>
         <li>
@@ -54,7 +55,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		</div>
         <?php } ?> <!-- end recent comments if -->
         
-        <?php if (Options::get('tags')) { ?> <!-- check if tags should be displayed -->
+        <?php if (Options::get('rdarkness__display_tags')) { ?> <!-- check if tags should be displayed -->
 		<div class="tags">
 		<h2>Tags</h2>
 		<?php echo $theme->tag_cloud(); ?>
