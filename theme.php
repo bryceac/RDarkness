@@ -26,6 +26,12 @@ class rdarkness extends Theme
 			$this->assign( 'pages', Posts::get( 'page_list' ) );
 		}
 		
+		// add a recent comments variable, to remove need for plugin
+		if (!$this->template_engine->assign( 'recent_comments' ) )
+		{
+			$this->assign( 'recent_comments', Comments::get( array('limit' => 5, 'status' => Comment::STATUS_APPROVED, 'type' => Comment::COMMENT, 'orderby' => 'date DESC' ) ) );
+		}
+		
 		parent::add_template_vars();
 	}
 }

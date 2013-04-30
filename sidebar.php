@@ -33,7 +33,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		<?php echo $theme->monthly_archives(); ?>
 		</div>
 		<div class="recent">
-		<?php echo $theme->show_recentcomments(); ?>
+        <ul>
+		<?php foreach($recent_comments as $comment) { ?>
+        <li>
+        <?php if (is_null($comment->url) || strlen($comment->url) == 0) { ?>
+        <?php echo $comment->name; ?> on <a href="<?php echo $comment->post->permalink; ?>"><?php echo $comment->post->title; ?></a>
+        <?php } else { ?>
+        <a href="<?php echo $comment->url; ?>" rel="nofollow"><?php echo $comment->name; ?></a> on <a href="<?php echo $comment->post->permalink; ?>"><?php echo $comment->post->title; ?></a>
+        </li>
+        <?php } // end else ?>
+        <?php } // end loop ?>
+        </ul>
 		</div>
 		<div class="tags">
 		<h2>Tags</h2>
