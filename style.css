@@ -161,6 +161,10 @@ a:active {
 #post-nav, .post {
 					clear:both;
 				}
+
+/* make comment field adjust to screen size */
+#comments textarea {
+	max-width:100%;
 }
 
 
