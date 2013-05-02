@@ -75,8 +75,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <li><a class="feedlink" href="<?php URL::out( 'atom_feed_comments'); ?>"><?php _e('Comment feed'); ?></a></li>
 <?php } ?> <!-- end feeds if -->
 <?php if($display_mlinks) { ?> <!-- check if misc links should be displayed -->
-<li><a href="http://www.amazon.com/Bryces-Blog/dp/B007RHRWFK/ref=sr_1_1?s=digital-text&#38;ie=UTF8&#38;qid=1333640280&#38;sr=1-1">Subscribe via Amazon</a></li>
-<li><a href="http://www.google.com/producer/editions/CAow8dtA/bryces_blog">Subscribe via Google Currents</a></li>
+<li><a href="">Subscribe via Amazon</a></li>
+<li><a href="">Subscribe via Google Currents</a></li>
 <?php } ?> <!-- end misc if -->
 <?php if($display_login) { ?> <!-- check if login should be displayed -->
 <?php if ($loggedin)
