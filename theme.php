@@ -24,6 +24,12 @@ class rdarkness extends Theme
 	'display_flinks' => true,
 	);
 	
+	// set stuff to show in header, so that child themes can be created easily
+	public function action_template_header($theme)
+	{
+		Stack::add('template_stylesheet', $theme->get_url('/style.css'));
+	}
+	
 	// set options upon activation
 	public function action_theme_activated()
 	{
