@@ -18,10 +18,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <?php if ($request->display_search) { echo("'" . htmlspecialchars( $criteria ) . "' Search Results - "); } // conditional statement based on hmallow mobile Habari theme ?>
 <?php Options::out( 'title' ); ?>
 </title>
-<?php $theme->header(); ?>
+<?php echo $theme->header(); ?>
 <link rel="alternate" href="<?php URL::out( 'atom_feed', array( 'index' => 1)); ?>" title="Entry Feed" type="application/atom+xml">
 <link rel="alternate" href="<?php URL::out( 'atom_feed_comments'); ?>" title="Comments feed" type="application/atom+xml">
-<?php echo $theme->header(); ?>
 </head>
 
 <body>
