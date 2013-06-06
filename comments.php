@@ -1,4 +1,6 @@
-<?php if ( !defined( 'HABARI_PATH' ) ) { die('No direct access'); } ?>
+<?php 
+namespace Habari;
+if ( !defined( 'HABARI_PATH' ) ) { die('No direct access'); } ?>
 <?php if ( Session::has_messages() ) {
 		Session::messages_out();
 	}
