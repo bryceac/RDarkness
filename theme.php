@@ -7,7 +7,9 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */ ?>
-<?php if ( !defined( 'HABARI_PATH' ) ) { die('No direct access'); }
+<?php 
+namespace Habari;
+if ( !defined( 'HABARI_PATH' ) ) { die('No direct access'); }
 class rdarkness extends Theme
 {
 	// create options that will allow theme configuration
@@ -51,28 +53,28 @@ class rdarkness extends Theme
 	public function action_theme_ui($theme)
 	{
 		$ui = new FormUI('RDarkness config');
-		$ui->append('checkbox', 'mod_login', __CLASS__.'__display_login', _t('Display login'));
-		$ui->mod_login->value = Options::get(__CLASS__.'__display_login');
-		$ui->append('checkbox', 'mod_rcomments', __CLASS__.'__display_rcomments', _t('Display Recent Comments'));
-		$ui->mod_rcomments->value = Options::get(__CLASS__.'__display_rcomments');
-		$ui->append('checkbox', 'mod_pages', __CLASS__.'__display_pages', _t('Display Pages'));
-		$ui->mod_pages->value = Options::get(__CLASS__.'__display_pages');
-		$ui->append('checkbox', 'mod_archives', __CLASS__.'__display_archive', _t('Display Archives'));
-		$ui->mod_archives->value = Options::get(__CLASS__.'__display_archive');
-		$ui->append('checkbox', 'mod_tags', __CLASS__.'__display_tags', _t('Display Tags'));
-		$ui->mod_tags->value = Options::get(__CLASS__.'__display_tags');
-		$ui->append('checkbox', 'mod_blogroll', __CLASS__.'__display_blogroll', _t('Display Blogroll'));
-		$ui->mod_blogroll->value = Options::get(__CLASS__.'__display_blogroll');
-		$ui->append('checkbox', 'mod_about', __CLASS__.'__display_about', _t('Display About Message'));
-		$ui->mod_about->value = Options::get(__CLASS__.'__display_about');
-		$ui->append('checkbox', 'mod_fmess', __CLASS__.'__display_fmess', _t('Display Footer Message'));
-		$ui->mod_fmess->value = Options::get(__CLASS__.'__display_fmess');
-		$ui->append('checkbox', 'mod_mlinks', __CLASS__.'__display_mlinks', _t('Display Misc. Links'));
-		$ui->mod_mlinks->value = Options::get(__CLASS__.'__display_mlinks');
-		$ui->append('checkbox', 'mod_flinks', __CLASS__.'__display_flinks', _t('Display Feed Links'));
-		$ui->mod_flinks->value = Options::get(__CLASS__.'__display_flinks');
-		$ui->append('submit', 'save', _t('Save'));
-		$ui->set_option('success_message', _t('Configuration saved'));
+		$dis_login = $ui->append(FormControlCheckbox::create('mod_login', __CLASS__.'__display_login')->label(_t('Display login')));
+		$dis_login->value = Options::get(__CLASS__.'__display_login');
+		$dis_rcomments = $ui->append(FormControlCheckbox::create('mod_rcomments', __CLASS__.'__display_rcomments')->label(_t('Display Recent Comments')));
+		$dis_rcomments->value = Options::get(__CLASS__.'__display_rcomments');
+		$dis_pages = $ui->append(FormControlCheckbox::create('mod_pages', __CLASS__.'__display_pages')->label(_t('Display Pages')));
+		$dis_pages->value = Options::get(__CLASS__.'__display_pages');
+		$dis_archives = $ui->append(FormControlCheckbox::create('mod_archives', __CLASS__.'__display_archive')->label(_t('Display Archives')));
+		$dis_archives->value = Options::get(__CLASS__.'__display_archive');
+		$dis_tags = $ui->append(FormControlCheckbox::create('mod_tags', __CLASS__.'__display_tags')->label(_t('Display Tags')));
+		$dis_tags->value = Options::get(__CLASS__.'__display_tags');
+		$dis_blogroll = $ui->append(FormControlCheckbox::create('mod_blogroll', __CLASS__.'__display_blogroll')->label(_t('Display Blogroll')));
+		$dis_blogroll->value = Options::get(__CLASS__.'__display_blogroll');
+		$dis_about = $ui->append(FormControlCheckbox::create('mod_about', __CLASS__.'__display_about')->label(_t('Display About Message')));
+		$dis_about->value = Options::get(__CLASS__.'__display_about');
+		$dis_fmess = $ui->append(FormControlCheckbox::create('mod_fmess', __CLASS__.'__display_fmess')->label(_t('Display Footer Message')));
+		$dis_fmess->value = Options::get(__CLASS__.'__display_fmess');
+		$dis_mlinks = $ui->append(FormControlCheckbox::create('mod_mlinks', __CLASS__.'__display_mlinks')->label(_t('Display Misc. Links')));
+		$dis_mlinks->value = Options::get(__CLASS__.'__display_mlinks');
+		$dis_flinks = $ui->append(FormControlCheckbox::create('mod_flinks', __CLASS__.'__display_flinks')->label(_t('Display Feed Links')));
+		$dis_flinks->value = Options::get(__CLASS__.'__display_flinks');
+		$ui->append(FormControlSubmit::create('save')->set_caption(_t('Save')));
+		$ui->set_settings(array('success_message' => _t('Configuration saved')));
 		// return $ui;
 		$ui->out();
 	}
@@ -96,7 +98,7 @@ class rdarkness extends Theme
 		if (!$this->template_engine->assign( 'recent_comments' ) )
 		{
 			// this limits the list of recent comments to five items
-			$this->assign( 'recent_comments', Comments::get( array('limit' => 5, 'status' => Comment::STATUS_APPROVED, 'type' => Comment::COMMENT, 'orderby' => 'date DESC' ) ) );
+			$this->assign( 'recent_comments', Comments::get( array('limit' => 5, 'status' => Comment::status('approved'), 'type' => Comment::type('comment'), 'orderby' => 'date DESC' ) ) );
 		}
 		
 		parent::add_template_vars();
