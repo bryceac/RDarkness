@@ -67,7 +67,7 @@ Theme will need to be activated for it to be your blog's theme.
 
 If you need help, contact the author at the following email address:
 
-brycecmpbell@gmail.com
+habari@brycecampbell.me
 
 ==Misc.==
 
