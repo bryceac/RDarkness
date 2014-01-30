@@ -24,6 +24,12 @@ class rdarkness extends Theme
 	'display_flinks' => true,
 	);
 	
+	// fix issue with assets directory in child themes
+	public function action_template_header($theme)
+	{
+		Stack::add('template_stylesheet', $theme->get_url('/style.css'));
+	}
+	
 	// set options upon activation
 	public function action_theme_activated()
 	{
