@@ -3,13 +3,14 @@
 '''Copyright:''' 2012 Bryce Campbell
 
 '''Description:''' RDarkness is a theme created for Habari and tested with version 0.8. Its code is based on a mix of K2, Charcoal, and Mzingi. Even though it is a dark theme, only the main background is dark, in order to ensure readability.
-'''Version:''' 0.5
+'''Version:''' 0.4.1
 ==Version History==
 
 <dl>
 <dt>0.3</dt><dd>Last known version that works on 0.8</dd>
 <dt>0.4</dt><dd>Update. Theme is now configurable. released 4/30/2013</dd>
 <dt>0.5</dt><dd>Update. Theme now works on Habari 0.10 alpha.</dd>
+<dt>0.4.1</dt><dd>Minor update. fixed issue with child themes and changed link address formatting on printed page.</dd>
 </dl>
 
 ==FAQ==
