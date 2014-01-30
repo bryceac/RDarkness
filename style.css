@@ -82,8 +82,13 @@ h1, h2, h3, h4, h5, h6 {
 /*make sure no bullet appear in sidebar */
 #sidebar ul {
 				list-style-type:none;
+				margin:0;
+				padding:0;
 			}
 			
+#search {
+			max-width:100%;
+		}
 /* rules to make unbulleted unordered list */
 ul.noBullet {
 				list-style-type:none;
@@ -212,6 +217,7 @@ h1, h2, h3, h4, h5, h6 {
 /* formatting for all posts */
 .post {
 		text-align:left;
+		height:auto;
 	}
 	
 /* make pubdate center */	
@@ -310,6 +316,9 @@ a:link, a:visited {
 			
 /* display link addresses on print, which may be ignored in some browsers. Does not work too well for internal links. */
 .entry a:link:after, .entry a:visited:after {
+										display:inline-block;
+										margin-left:5px;
+										font-style:normal;
 										content: " (" attr(href) ")";
 									}
 									
