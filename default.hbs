@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{{meta_title}}</title>
+<link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="alternate" type="application/rss+xml" href="{{@blog.url}}/rss/">
+{{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+<div id="wrapper"> <!-- wrapping div -->
+<!-- place to hold header -->
+<div id="top"> <!-- placeholder for logos and such -->
+<h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+<!-- place to hold tagline -->
+<p class="tagline">{{@blog.description}}</p>
+</div> <!-- close logo placeholder -->
+<div id="header"> <!-- open header div -->
+&#160;
+</div> <!-- close header -->
+<div id="content"> <!-- content div -->
+{{{body}}}
+</div> <!-- close content div -->
+<div id="sidebar"> <!-- create area for side bar -->
+<div id="pages"> <!-- placeholder for pages -->
+<h2>Pages</h2>
+<ul class="noBullet">
+<li><a href="{{@blog.url}}">Home</a></li>
+<!-- list pages -->
+<!-- <?php foreach ($pages as $page)
+{ ?>
+	<li></li> -->
+<!-- <?php } // end loop ?> -->
+</ul>
+</div>
+<div class="archive">
+		<h2>Monthly Archive</h2>
+		</div>
+<div class="recent">
+		<h2>Recent Comments</h2>
+        <ul>
+		<!-- <?php foreach($recent_comments as $comment) { ?> -->
+        <li>
+       </li>
+        <!-- <?php } // end loop ?> -->
+        </ul>
+		</div>
+		<div class="tags">
+		<h2>Tags</h2>
+		</div>
+		<div class="blogroll">
+		</div>
+<div id="navmeta">
+<h2>Meta</h2>
+<ul class="noBullet">
+<li><a class="feedlink" href="{{@blog.url}}/rss/">Subscribe</a></li>
+<li><a href="{{@blog.url}}/ghost" title="Login">Login</a></li>
+</ul>
+</div> <!-- close sidebar meta -->
+</div> <!-- close sidebar -->
+<div id="footer"> <!-- open footer div -->
+&#160;
+</div> <!-- close footer -->
+<div id="notice"> <!-- place to hold footer message -->
+<p>{{@blog.title}} is powered by <a href="http://ghost.org">Ghost</a>. Theme created by Bryce.</p>
+</div> <!-- place to hold footer message -->
+</div><!-- close wrapper -->
+{{ghost_foot}}
+</body>
+</html>

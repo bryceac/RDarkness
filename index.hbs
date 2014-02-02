@@ -1,0 +1,17 @@
+{{!< default}}
+<!-- create loop to get posts -->
+{{#foreach posts}}
+<div class="post"> <!-- container for posts -->
+<h2><a href="{{url}}" title="{{{title}}}">{{{title}}}</a></h2>
+<div class="date">{{date published_at format="MMMM DD, YYYY"}}</div>
+<div class="entry">{{excerpt}}</div>
+<div class="meta">
+<div class="tags">
+{{#tags}}
+<li>{{nane}}</li>
+{{/tags}}
+</div>
+</div> <!-- close meta space -->
+</div> <!-- close post container -->
+{{/foreach}}
+{{pagination}}
