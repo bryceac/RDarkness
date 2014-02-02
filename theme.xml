@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <license url="http://opensource.org/licenses/MIT">MIT License</license>
 <!-- <class>rdarkness</class> -->
 <author url="http://brycecampbell.me/~bryce/blog">Bryce Campbell</author>
-<version>0.4.1</version>
+<version>0.4.2</version>
 <description>This is a dark theme for Habari. It features a black background with a red heading area that is separated from the content by a gray bar. Content itself is in a white background.</description>
 <template_engine>rawphpengine</template_engine>
 <copyright>2012</copyright>

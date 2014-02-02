@@ -3,7 +3,7 @@
 '''Copyright:''' 2012 Bryce Campbell
 
 '''Description:''' RDarkness is a theme created for Habari and tested with version 0.8. Its code is based on a mix of K2, Charcoal, and Mzingi. Even though it is a dark theme, only the main background is dark, in order to ensure readability.
-'''Version:''' 0.4.1
+'''Version:''' 0.4.2
 ==Version History==
 
 <dl>
@@ -11,6 +11,7 @@
 <dt>0.4</dt><dd>Update. Theme is now configurable. released 4/30/2013</dd>
 <dt>0.5</dt><dd>Update. Theme now works on Habari 0.10 alpha.</dd>
 <dt>0.4.1</dt><dd>Minor update. fixed issue with child themes and changed link address formatting on printed page.</dd>
+<dt>0.4.2</dt><dd>Minor update. Theme now works on both [http://ghost.org Ghost] and [http://habariproject.org Habari]. released 2/01/2013</dd>
 </dl>
 
 ==FAQ==
@@ -26,7 +27,7 @@
 <li>
 <dl>
 <dt>Does this theme work with WordPress?</dt>
-<dd>No, it does not because the functions used are mainly found only in Habari. WordPress has different names for functions that do the same things though.
+<dd>No, it does not because the functions used are mainly found only in Habari. WordPress has different names for functions that do the same things though. There is other code too, but Wordpress will not recognize that either, because the code used, which seems similar to Habari, is meant for Ghost users.
 </dd>
 </dl>
 </li>
@@ -42,9 +43,16 @@
 <dd>While testing the changes, I found that I needed to deactivate theme, by temporarily activating a different theme, then reactivating this one.</dd>
 </dl>
 </li>
+<li>
+<dl>
+<dt>Why do I get less out of this theme on Ghost than I do on Habari?</dt><dd>When I added in Ghost support, which was around the Ghost 0.4.1 release, there was much missing, such as ability to list tags, list pages, have next/previous post links, and a few other things. However, like you guys, I wish I could have added everything. I will try to add them when and if I can, but Habari is my main focus.</dd>
+</dl>
+</li>
 </ul>
 
 ==How to install:==
+
+===Habari===
 
 To install this theme, move the RDarkness folder or clone this repo to
 
@@ -62,14 +70,36 @@ BlogRoot/user/themes/
 
 Theme will need to be activated for it to be your blog's theme.
 
+===Ghost===
+
+Process was practically the same as Habari, with some differences.
+
+moveRDarkness folder or clone this repo to
+
+<pre>
+BlogRoot/content/themes/
+</pre>
+
+<dl>
+<dt>BlogRoot</dt><dd>Location of Ghost installation.</dd>
+<dt>content</dt><dd>content directory.</dd>
+<dt>themes</dt><dd>themes directory.</dd>
+</dl>
+
+Ghost will most likely need to be restarted before you can use the theme.
 
 ==Where to find help==
 
-If you need help, contact the author at the following email address:
+If you need help, contact the author at one of the following email addresses:
 
-habari@brycecampbell.me
+<dl>
+<dt>Habari</dt><dd>habari@brycecampbell.me</dd>
+<dt>Ghost</dt><dd>ghost@brycecampbell.me</dd>
+</dl>
 
 ==Misc.==
+
+===Habari===
 
 There are spaces populated by things I added for my own blog. As of version 0.4, if there are things you do not want displayed, they can be turned out in theme configuration. I ask that you do not edit any PHP files, unless necessary by the plugin you want to use.
 
@@ -77,9 +107,15 @@ In order to keep things configurable, do not remove any conditional PHP statemen
 
 If you make changes to sidebar.php, I suggest you backup that file, so you do not lose your changes when getting updates.
 
-Version 0.4 has been tested with Habari 0.9. It is not known if anything beyond 0.3 is backward compatible with 0.8.
+Version 0.4.x has been tested with Habari 0.9. It is not known if anything beyond 0.3 is backward compatible with 0.8.
+
+===Ghost===
+
+Theme has been tested with the 0.4.x release of Ghost. It is not known whether it will earlier versions
 
 ===Recommended Plugins===
+
+====Habari====
 
 This theme makes use of various plugins that I think look best with the theme. If you want to see it how I do, I recommend installing the following:
 
@@ -87,3 +123,7 @@ This theme makes use of various plugins that I think look best with the theme. I
 <li>[https://github.com/habari-extras/blogroll blogroll]</li>
 <li>[http://blog.tinyau.net/archives/2007/09/22/habari-rn-monthly-archives-plugin RN Monthly Archives]</li>
 </ul>
+
+====Ghost====
+
+No plugins have been used at the time of development.
