@@ -22,11 +22,21 @@ if ( !defined( 'HABARI_PATH' ) ) { die('No direct access'); } ?>
 <div id="pages"> <!-- placeholder for pages -->
 <h2>Pages</h2>
 <ul class="noBullet">
-<li><a href="<?php Site::out_url( 'habari' ); ?>"><?php _e('Home'); ?></a></li>
+<?php if ($request->display_home)
+{ ?>
+	<li><span class="bold"><?php _e('Home'); ?></span></li>
+<?php } else { ?>
+	<li><a href="<?php Site::out_url( 'habari' ); ?>"><?php _e('Home'); ?></a></li>
+<?php } ?>
 <!-- list pages -->
 <?php foreach ($pages as $page)
 { ?>
-	<li><a href="<?php echo $page->permalink; ?>" title="<?php echo $page->title; ?>"><?php echo $page->title; ?></a></li>
+	<?php if (isset($post) && $page->id == $post->id)
+	{ ?>
+    	<li><span class="bold"><?php echo $page->title; ?></span></li>
+    <?php } else { ?>
+		<li><a href="<?php echo $page->permalink; ?>" title="<?php echo $page->title; ?>"><?php echo $page->title; ?></a></li>
+    <?php } ?>
 <?php } ?> <!-- end loop -->
 </ul>
 </div>
