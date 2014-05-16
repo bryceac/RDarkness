@@ -1,0 +1,8 @@
+/* the following are rules that are shared no matter what stylesheet is used */
+.bold {
+        font-weight:bold;
+    }
+    
+.italic {
+            font-style:italic;
+        }

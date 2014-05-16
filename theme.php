@@ -24,10 +24,21 @@ class rdarkness extends Theme
 	'display_flinks' => true,
 	);
 	
-	// fix issue with assets directory in child themes
+	// set stuff to show in header, so that child themes can be created easily
 	public function action_template_header($theme)
 	{
 		Stack::add('template_stylesheet', $theme->get_url('/style.css'));
+		Stack::add('template_stylesheet', $theme->get_url('/common.css'));
+	}
+	
+	//set stuff to show in footer, so that child themes can be created easily
+	public function action_template_footer($theme)
+	{
+		if (!Stack::has('template_header_javascript', 'jquery') && !Stack::has('template_footer_javascript', 'jquery'))
+		{
+			Stack::add('template_footer_javascript', Site::get_url('scripts') . '/jquery.js', 'jquery');
+		} else;
+		Stack::add('template_footer_javascript', $theme->get_url('/fontscale.js'), 'fontscale', 'jquery');
 	}
 	
 	// set options upon activation
