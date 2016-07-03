@@ -9,8 +9,9 @@
 <?php } ?> <!-- end nested if --> 
 <?php } ?> <!-- end about if --> 
 <nav>
-<form method="get" id="searchform">
-<p id="search"><input type="text" placeholder="Search..."></p>
+<form method="get" action"<?php URL::out('display_search'); ?>" id="searchform">
+<p id="search"><input type="text" name="criteria" value="<?php if (isset($citeria)) { echo htmlentities($criteria, ENT_COMPAT, 'UTF-8'); } ?>" placeholder="<?php _e(Search...) ?>"></p>
+<div class="hidden-submit"><input type="submit" tabindex="-1"></div>
 </form>
 <ul id="menu">
 <?php if ($display_pages) { ?> <!-- check if pages should be displayed -->  
@@ -35,7 +36,7 @@
  </li>
  <?php } ?> <!-- end pages if -->
  <?php if($display_flinks || $display_login) { ?> <!-- make sure div is present only when needed --> 
- <li onClick="return true">Meta<ul>
+ <li onClick="return true">Meta <span class="arrow">&#709;</span><ul>
  <?php if($display_flinks) { ?> <!-- check if feed links should be displayed --> 
  <li><a class="feedlink" href="<?php URL::out( 'atom_feed', array( 'index' => 1)); ?>"><?php _e('Entry feed'); ?></a></li> 
  <li><a class="feedlink" href="<?php URL::out( 'atom_feed_comments'); ?>"><?php _e('Comment feed'); ?></a></li> 

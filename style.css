@@ -111,6 +111,16 @@ article footer {
 	text-align:center;
 }
 
+/* class to hide submit button, according to Stackoverflow question about making return key submit */
+.hidden-submit {
+	border: 0 none;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden
+}
+
 } /* end shared screen rules */
 
 /* rules to be used for screen resolution under 375px */
@@ -118,6 +128,11 @@ article footer {
 {
 #bar {
 	width:100%;
+}
+
+/* display only nav elements in small screen */
+#other {
+	display:none;
 }
 
 #menu {
@@ -190,6 +205,10 @@ article footer {
 {
 #bar {
 	width:100%;
+}
+
+#other {
+	display:none;
 }
 
 #menu {
