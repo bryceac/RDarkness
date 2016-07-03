@@ -15,12 +15,8 @@ class rdarkness extends Theme
 	'display_login' => true,
 	'display_rcomments' => true,
 	'display_pages' => true,
-	'display_archive' => true,
-	'display_tags' => true,
 	'display_blogroll' => true,
 	'display_about' => true,
-	'display_fmess' => true,
-	'display_mlinks' => true,
 	'display_flinks' => true,
 	);
 	
@@ -68,18 +64,8 @@ class rdarkness extends Theme
 		$ui->mod_rcomments->value = Options::get(__CLASS__.'__display_rcomments');
 		$ui->append('checkbox', 'mod_pages', __CLASS__.'__display_pages', _t('Display Pages'));
 		$ui->mod_pages->value = Options::get(__CLASS__.'__display_pages');
-		$ui->append('checkbox', 'mod_archives', __CLASS__.'__display_archive', _t('Display Archives'));
-		$ui->mod_archives->value = Options::get(__CLASS__.'__display_archive');
-		$ui->append('checkbox', 'mod_tags', __CLASS__.'__display_tags', _t('Display Tags'));
-		$ui->mod_tags->value = Options::get(__CLASS__.'__display_tags');
-		$ui->append('checkbox', 'mod_blogroll', __CLASS__.'__display_blogroll', _t('Display Blogroll'));
-		$ui->mod_blogroll->value = Options::get(__CLASS__.'__display_blogroll');
 		$ui->append('checkbox', 'mod_about', __CLASS__.'__display_about', _t('Display About Message'));
 		$ui->mod_about->value = Options::get(__CLASS__.'__display_about');
-		$ui->append('checkbox', 'mod_fmess', __CLASS__.'__display_fmess', _t('Display Footer Message'));
-		$ui->mod_fmess->value = Options::get(__CLASS__.'__display_fmess');
-		$ui->append('checkbox', 'mod_mlinks', __CLASS__.'__display_mlinks', _t('Display Misc. Links'));
-		$ui->mod_mlinks->value = Options::get(__CLASS__.'__display_mlinks');
 		$ui->append('checkbox', 'mod_flinks', __CLASS__.'__display_flinks', _t('Display Feed Links'));
 		$ui->mod_flinks->value = Options::get(__CLASS__.'__display_flinks');
 		$ui->append('submit', 'save', _t('Save'));
