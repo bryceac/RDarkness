@@ -1,7 +1,7 @@
 <?php if ( !defined( 'HABARI_PATH' ) ) { die('No direct access'); } ?>
 <aside id="bar"> <!-- area to hold sidebar --> 
 <nav>
-<form method="get" action"<?php URL::out('display_search'); ?>" id="searchform">
+<form method="get" action="<?php URL::out('display_search'); ?>" id="searchform">
 <p id="search"><input type="text" name="criteria" value="" placeholder="Search..."></p>
 <div class="hidden-submit"><input type="submit" tabindex="-1"></div>
 </form>
