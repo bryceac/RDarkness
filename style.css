@@ -208,6 +208,23 @@ article footer {
 #bar, main {
 	clear:both;
 }
+
+#pagenav {
+	font-size:2em;
+}
+
+#pagenav a {
+	margin-left:10px;
+	border-style:solid;
+	border-color:#000000;
+	border-radius:5px;
+}
+
+#pagenav a.next_page, #pagenav.prev_page {
+	margin-left:0;
+	border-style:none;
+	border-radius:0;
+}
 } /* end rules for resolutions below 375px */
 
 /* rules to be used for screen resolution less than or equal to 980px */
@@ -283,6 +300,23 @@ article footer {
 
 #bar, main {
 	clear:both;
+}
+
+#pagenav {
+	font-size:2em;
+}
+
+#pagenav a {
+	margin-left:10px;
+	border-style:solid;
+	border-color:#000000;
+	border-radius:5px;
+}
+
+#pagenav a.next_page, #pagenav.prev_page {
+	margin-left:0;
+	border-style:none;
+	border-radius:0;
 }
 } /* end rules for resolutions below 980px */
 
