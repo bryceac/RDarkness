@@ -40,7 +40,7 @@
  			} 
  			$class.= '"'; 
  		?> 
- 			<li id="comment-<?php echo $comment->id; ?>" <?php echo $class; ?>> 
+ 			<li id="comment-<?php echo $comment->id; ?>" <?php echo $class; ?> 
   				<div class="comment-content"> 
  		        <?php echo $comment->content_out; ?> 
  		       </div> 
@@ -69,6 +69,5 @@
  	</div> 
      <?php } else { 
  					_e('Sorry, This post is closed to new comments.'); 
- 	} ?> 
- </div> <!-- close comment div --> 
+ 	} ?>  
 </section>
