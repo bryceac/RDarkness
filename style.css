@@ -361,7 +361,17 @@ article footer {
  										margin-left:5px; 
  										font-style:normal; 
  										content: " (" attr(href) ")"; 
- 									} 
+ 									}
+									
+									article header a:link:after, article header a:visited:after { 
+ 										content:normal;
+ 									}
+									
+									
+a:link, a:visited {
+	font-weight:bold;
+	color:#520;
+}
  									 
  /* display abbreviation and acronym meanings on printed page, if page uses the respective abbr and acronym tags. */ 
  abbr:after, acronym:after { 
@@ -417,6 +427,10 @@ article footer {
 	}
 	
 	footer {
+		display:none;
+	}
+	
+	.socialink, #comments {
 		display:none;
 	}
 } /* end print rules */

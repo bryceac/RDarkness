@@ -5,7 +5,6 @@
  <article> <!-- container for posts -->
  <header>
  <h2><a href="<?php echo $post->permalink; ?>" title="<?php echo $post->title; ?>"><?php echo $post->title_out; ?></a></h2> 
- <p class="date"><?php echo $post->pubdate->out('F j, Y'); ?></p>
  </header> 
  <div class="entry"><?php echo $post->content_out; ?></div> 
  <footer class="meta"> <!-- content meta -->
