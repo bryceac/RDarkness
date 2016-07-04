@@ -11,6 +11,11 @@ body {
 	font-family:Baskerville, Georgia, Times, Times New Roman, serif;
 	font-size:1em;
 	text-align:center;
+	background-color:#000000;
+}
+
+#wrapper {
+	background-color:#FFFFFF;
 }
 
 h1, h2, h3, h4, h5, h6 {
