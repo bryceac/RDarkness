@@ -215,6 +215,7 @@ article footer {
 
 #pagenav a {
 	margin-left:10px;
+	padding:10px;
 	border-style:solid;
 	border-color:#000000;
 	border-radius:5px;
@@ -308,6 +309,7 @@ article footer {
 
 #pagenav a {
 	margin-left:10px;
+	padding:10px;
 	border-style:solid;
 	border-color:#000000;
 	border-radius:5px;
