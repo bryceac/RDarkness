@@ -11,14 +11,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 class rdarkness extends Theme
 {
 	// create options that will allow theme configuration
-	var $defaults = array(
+	/* var $defaults = array(
 	'display_login' => true,
 	'display_rcomments' => true,
 	'display_pages' => true,
-	'display_blogroll' => true,
 	'display_about' => true,
 	'display_flinks' => true,
-	);
+	); */
 	
 	// set stuff to show in header, so that child themes can be created easily
 	public function action_template_header($theme)
@@ -40,22 +39,22 @@ class rdarkness extends Theme
 	// set options upon activation
 	public function action_theme_activated()
 	{
-		$opts = Options::get_group(__CLASS__);
+	/*	$opts = Options::get_group(__CLASS__);
 		if (empty($opts))
 		{
 			Options::set_group(__CLASS__, $this->defaults);
-		}
+		} */
 	}
 	
 	// required to allow theme configuration
-	public function filter_theme_config($configurable)
+	/* public function filter_theme_config($configurable)
 	{
 		$configurable = true;
 		return $configurable;
-	}
+	} */
 	
 	// make configuration form
-	public function action_theme_ui($theme)
+	/* public function action_theme_ui($theme)
 	{
 		$ui = new FormUI('RDarkness config');
 		$ui->append('checkbox', 'mod_login', __CLASS__.'__display_login', _t('Display login'));
@@ -72,7 +71,7 @@ class rdarkness extends Theme
 		$ui->set_option('success_message', _t('Configuration saved'));
 		// return $ui;
 		$ui->out();
-	}
+	} */
 	public function action_init_theme()
 	{
 		// get tags working
@@ -99,18 +98,6 @@ class rdarkness extends Theme
 		parent::add_template_vars();
 		
 		// assign variables to use with options
-		$opts = Options::get_group(__CLASS__);
-		
-		$this->assign('display_login', $opts['display_login']);
-		$this->assign('display_rcomments', $opts['display_rcomments']);
-		$this->assign('display_pages', $opts['display_pages']);
-		$this->assign('display_archives', $opts['display_archive']);
-		$this->assign('display_tags', $opts['display_tags']);
-		$this->assign('display_blogroll', $opts['display_blogroll']);
-		$this->assign('display_about', $opts['display_about']);
-		$this->assign('display_fmess', $opts['display_fmess']);
-		$this->assign('display_mlinks', $opts['display_mlinks']);
-		$this->assign('display_flinks', $opts['display_flinks']);
 		
 	}
 }

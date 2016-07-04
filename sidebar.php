@@ -1,20 +1,11 @@
 <?php if ( !defined( 'HABARI_PATH' ) ) { die('No direct access'); } ?>
-<aside id="bar"> <!-- area to hold sidebar -->
-<?php if ($display_about) { ?> <!-- check if about should be displayed --> 
-<?php $about = Options::get( 'about' ); if( !empty( $about ) ) { ?> 
- 		<div class="sb-about"> 
- 		<h2><?php _e('About'); ?></h2> 
- 		<p><?php echo $about; ?></p> 
- 		</div> 
-<?php } ?> <!-- end nested if --> 
-<?php } ?> <!-- end about if --> 
+<aside id="bar"> <!-- area to hold sidebar --> 
 <nav>
 <form method="get" action"<?php URL::out('display_search'); ?>" id="searchform">
-<p id="search"><input type="text" name="criteria" value="<?php if (isset($citeria)) { echo htmlentities($criteria, ENT_COMPAT, 'UTF-8'); } ?>" placeholder="<?php _e(Search...) ?>"></p>
+<p id="search"><input type="text" name="criteria" value="" placeholder="Search..."></p>
 <div class="hidden-submit"><input type="submit" tabindex="-1"></div>
 </form>
-<ul id="menu">
-<?php if ($display_pages) { ?> <!-- check if pages should be displayed -->  
+<ul id="menu">  
 <li obClick="return true">Pages <span class="arrow">&#709;</span><ul>  
  <?php if ($request->display_home) 
  { ?> 
@@ -34,43 +25,20 @@
  <?php } ?> <!-- end loop --> 
  </ul> 
  </li>
- <?php } ?> <!-- end pages if -->
- <?php if($display_flinks || $display_login) { ?> <!-- make sure div is present only when needed --> 
  <li onClick="return true">Meta <span class="arrow">&#709;</span><ul>
- <?php if($display_flinks) { ?> <!-- check if feed links should be displayed --> 
  <li><a class="feedlink" href="<?php URL::out( 'atom_feed', array( 'index' => 1)); ?>"><?php _e('Entry feed'); ?></a></li> 
  <li><a class="feedlink" href="<?php URL::out( 'atom_feed_comments'); ?>"><?php _e('Comment feed'); ?></a></li> 
- <?php } ?> <!-- end feeds if --> 
- <?php if($display_login) { ?> <!-- check if login should be displayed --> 
  <?php if ($loggedin) 
  { ?> 
  	<li><a href="<?php Site::out_url( 'admin' ); ?>" title="<?php _e('Admin Area'); ?>"><?php _e('Admin'); ?></a></li> 
  <?php } else { ?> 
  	<li><a href="<?php Site::out_url( 'login' ); ?>" title="<?php _e('Login'); ?>"><?php _e('Login'); ?></a></li> 
-   <?php } ?> 
- <?php } ?> <!-- end main login if --> 
+   <?php } ?>  
  </ul> 
- </li>
- <?php } else; ?> <!-- end if statement for meta div --> 
+ </li> 
 </ul>
 </nav>
-<?php echo $theme->area( 'sidebar' ); ?>
 <div id="other"> <!-- placeholder for other -->
-<?php if ($display_rcomments) { ?> <!-- check if recent comments should be displayed --> 
-53 <div class="recent"> 
-54 		<h2>Recent Comments</h2> 
-55         <ul> 
-56 		<?php foreach($recent_comments as $comment) { ?> 
-57         <li> 
-58         <?php if (is_null($comment->url) || strlen($comment->url) == 0) { ?> 
-59         <?php echo $comment->name; ?> on <a href="<?php echo $comment->post->permalink; ?>"><?php echo $comment->post->title; ?></a> 
-60         <?php } else { ?> 
-61         <a href="<?php echo $comment->url; ?>" rel="nofollow"><?php echo $comment->name; ?></a> on <a href="<?php echo $comment->post->permalink; ?>"><?php echo $comment->post->title; ?></a> 
-62         </li> 
-63         <?php } // end else ?> 
-64         <?php } // end loop ?> 
-65         </ul> 
-66 		</div> 
-67         <?php } ?> <!-- end recent comments if --> 
+<?php echo $theme->area( 'sidebar' ); ?>
 </div>
 </aside> <!-- close side bar area -->
