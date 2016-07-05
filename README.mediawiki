@@ -1,8 +1,11 @@
 '''Author:''' Bryce
+
 '''Author's blog:''' http://blog.brycecampbell.me
+
 '''Copyright:''' 2012 Bryce Campbell
 
 '''Description:''' RDarkness is a theme created for Habari and tested with version 0.8. Its code is based on a mix of K2, Charcoal, and Mzingi. Even though it is a dark theme, only the main background is dark, in order to ensure readability.
+
 '''Version:''' 0.6
 ==Version History==
 
@@ -54,6 +57,7 @@
 If you need help, send an email to either of the following, depending on platform:
 
 '''Habari:''' habari@brycecampbell.me
+
 '''Ghost:''' ghost@brycecampbell.me
 
 ==How to install:==
