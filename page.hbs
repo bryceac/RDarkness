@@ -1,0 +1,17 @@
+{{!< default}}
+<!-- create loop to get posts --> 
+{{#post}} 
+<article> <!-- container for posts --> 
+  <header> 
+  <h2><a href="{{url}}" title="{{{title}}}">{{{title}}}</a></h2> 
+  </header>  
+  <div class="entry">{{content}}</div>  
+  <footer> <!-- content meta --> 
+  <ul> 
+ {{#tags}} 
+ <li>{{name}}</li> 
+ {{/tags}} 
+ </ul>   
+  </footer> <!-- close meta space -->
+  {{/post}}
+  </article> <!-- close post container --> 
