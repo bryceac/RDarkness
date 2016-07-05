@@ -1,0 +1,43 @@
+ <!doctype html> 
+ <html> 
+ <head> 
+ <meta charset="utf-8"> 
+ <title> 
+ {{meta_title}}
+ </title>
+ <link rel="stylesheet" href="/common.css" type="text/css">
+ <link rel="stylesheet" href="/style.css" type="text/css">
+ <link rel="alternate" type="application/rss+xml" href="{{@blog.url}}/rss/">
+ {{ghost_head}}
+ </head> 
+ <body class="{{body_class}}"> 
+ <div id="wrapper"> <!-- wrapping div --> 
+ <header id="banner"> <!-- banner area --> 
+ <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1> 
+ <!-- place to hold tagline --> 
+ <p>{{@blog.description}}</p>
+ </header> <!-- close banner area --> 
+ <div class="divider">&#160;</div> <!-- create divider div --> 
+
+ <aside id="bar"> <!-- area to hold sidebar -->  
+ <nav> 
+ {{navigation}}
+ </nav> 
+ <div id="other"> <!-- placeholder for other --> 
+ </div> 
+ </aside> <!-- close side bar area --> 
+<main> 
+  {{{body}}}
+  {{pagination}}  
+ </main> 
+<div class="divider">&#160;</div> <!-- add divider --> 
+ <footer> 
+ <p>{{meta_title}} is powered by <a href="http://ghost.org">Ghost</a>. Theme created by <a href="http://brycecampbell.me">Bryce</a>.</p> 
+ </footer> 
+ {{ghost_foot}}
+ </div> <!-- close wrapper --> 
+ </body> 
+</html> 
+<body>
+</body>
+</html>

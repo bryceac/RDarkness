@@ -1,0 +1,11 @@
+ <ul id="menu">   
+ <!-- Loop through the navigation items -->
+        {{#foreach navigation}}
+		{{#if current}}
+        <li><span class="bold">{{label}}</span></li>
+		{{else}}
+		<li><a href="{{url absolute="true"}}">{{label}}</a></li>
+		{{/if}}
+        {{/foreach}}
+        <!-- End the loop --> 
+ </ul> 
