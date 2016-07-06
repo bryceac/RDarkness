@@ -136,6 +136,9 @@ article footer {
 /* rules to be used for screen resolution under 375px */
 @media screen and (max-width:374px)
 {
+	body {
+		font-size:2em;
+	}
 #bar {
 	width:100%;
 }
@@ -232,6 +235,10 @@ article footer {
 /* rules to be used for screen resolution less than or equal to 980px */
 @media screen and  (min-width:375px) and (max-width:980px)
 {
+	body {
+		font-size:2em;
+	}
+	
 #bar {
 	width:100%;
 }
@@ -327,9 +334,6 @@ article footer {
 /* rules for large resolutions */
 @media screen and (min-width:981px)
 {
-	body {
-		background-color:#000000;
-	}
 	#wrapper {
 		padding-left:auto;
 		margin-left:auto;
