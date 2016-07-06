@@ -3,7 +3,7 @@
 <footer>
 <p><?php Options::out( 'title' ); ?> is powered by <a href="http://habariproject.org">Habari</a>. Theme created by <a href="http://brycecampbell.me">Bryce</a>.</p>
 </footer>
-<?php echo $theme->footer(); ?>
 </div> <!-- close wrapper -->
+<?php echo $theme->footer(); ?>
 </body>
 </html>
