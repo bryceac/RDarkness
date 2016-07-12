@@ -40,7 +40,7 @@
  			} 
  			$class.= '"'; 
  		?> 
- 			<li id="comment-<?php echo $comment->id; ?>" <?php echo $class; ?> 
+ 			<li id="comment-<?php echo $comment->id; ?>" <?php echo $class; ?>>
   				<div class="comment-content"> 
  		        <?php echo $comment->content_out; ?> 
  		       </div> 
