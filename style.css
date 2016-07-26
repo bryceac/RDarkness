@@ -208,6 +208,10 @@ article footer {
 	max-width:100%;
 }
 
+#other {
+	display:none;
+}
+
 #bar, main {
 	clear:both;
 }
@@ -305,6 +309,10 @@ article footer {
 
 #search input {
 	max-width:100%;
+}
+
+#other {
+	display:none;
 }
 
 #bar, main {
