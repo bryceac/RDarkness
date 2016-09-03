@@ -6,7 +6,7 @@
 <div class="hidden-submit"><input type="submit" tabindex="-1"></div>
 </form>
 <ul id="menu">  
-<li obClick="return true">Pages <span class="arrow">&#709;</span><ul>  
+<li onClick="return true">Pages <span class="arrow">&#709;</span><ul>  
  <?php if ($request->display_home) 
  { ?> 
  	<li><span class="bold"><?php _e('Home'); ?></span></li> 
