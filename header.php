@@ -3,6 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>
 <?php if ($request->display_entry || $request->display_page && isset($post)) { echo "$post->title - "; } // conditional statement that adds post or page title to what the browser recognizes as page title ?> 
 <?php if ($request->display_entries_by_tag && isset( $tag )) { echo(ucwords(Tags::get_by_slug($tag)->term_display) . ' - '); } // conditional statement that adds tag name to the page title ?> 
