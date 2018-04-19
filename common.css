@@ -2,7 +2,41 @@
 .bold {
         font-weight:bold;
     }
-    
+
 .italic {
             font-style:italic;
         }
+
+        .sans {
+                	font-family:sans-serif;
+                }
+
+        .serif {
+                		font-family:serif;
+                }
+
+        .left {
+                float:left;
+                clear:left;
+              }
+
+        .right {
+                float:right;
+                clear:right;
+              }
+
+/* the following makes it easy to setup divs like a table, for photo positioning */
+        div.gallery {
+                max-width:100%;
+                display:table;
+              }
+
+        div.grow {
+                display:table-row;
+              }
+
+        div.gcell {
+                display:table-cell;
+                max-width:50%;
+                vertical-align:top;
+              }
